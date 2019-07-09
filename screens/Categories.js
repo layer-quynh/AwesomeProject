@@ -30,7 +30,9 @@ export default class Categories extends React.PureComponent {
             <CategoryListItems 
                 category={item}
                 onPress={() => {
-                    navigation.navigate('Category');
+                    navigation.navigate('Category', {
+                        categoryName: item.name
+                    });
                 }} />}
           keyExtractor={item => `${item.id}`}
           contentContainerStyle={styles.container}
