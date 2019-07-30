@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import { StyleSheet, FlatList, View } from "react-native";
 import CategoryListItems from "../components/CategoryListItems";
 
@@ -12,12 +13,42 @@ export default class Categories extends React.PureComponent {
 
     this.state = {
       categories: [
-        { id: 1, name: "Dung cu truot tuyet" },
-        { id: 2, name: "Quan ao truot tuyet" },
-        { id: 3, name: "Kinh mu" }
+        { 
+          id: 1, 
+          name: "Dung cu truot tuyet" 
+      },
+      { 
+          id: 2, 
+          name: "Quan ao truot tuyet" 
+      },
+      { 
+          id: 3, 
+          name: "Kinh mu" 
+      }
       ]
     };
   }
+
+  // componentDidMount() {
+  //   axios.get('http://localhost:3000/categories')
+  //     .then(res => {
+  //       this.setState({
+  //         categories: res.data
+  //       })
+  //       console.warn(res);
+  //     })
+  //     .catch(err => {
+  //       console.warn(err);
+  //     }) 
+    // fetch('https://facebook.github.io/react-native/movies.json')
+    // .then((response) => response.json())
+    // .then((responseJson) => {
+    //   console.warn(responseJson);
+    // })
+    // .catch((error) => {
+    //   console.error(error);
+    // });
+  // };
 
   render() {
     const { navigation } = this.props;

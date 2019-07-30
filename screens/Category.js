@@ -22,7 +22,8 @@ export default class Category extends React.PureComponent {
                       }
                   ],
                   name: 'snow board 1',
-                  price: '500000'
+                  price: '500000',
+                  category: 1
               },
               {
                 id: 2,
@@ -32,7 +33,8 @@ export default class Category extends React.PureComponent {
                     }
                 ],
                 name: 'snow board 2',
-                price: '200000'
+                price: '200000',
+                category: 1
             }
           ]
       }
